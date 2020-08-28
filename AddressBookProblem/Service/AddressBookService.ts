@@ -42,4 +42,43 @@ export class AddressBookService {
     displayContacts = (): void => {
         fileOperations.displayRecords();
     }
+
+    updateContact = (): void => {
+        console.log("\n*********Update Contact************\n");
+        let index: number = readlineSync.question("\nEnter index of record you want to update: ");
+        addressBookList = fileOperations.readJsonFile();
+        let person: Person = addressBookList[index - 1];
+        console.log("1: Update existing address");
+        console.log("2: Update existing city name");
+        console.log("3: Update existing state name");
+        console.log("4: Update existing zip code");
+        console.log("5: Update existing phone number");
+        let choice: string = readlineSync.question("\nEnter your choice: ");
+        let data: string = readlineSync.question("\nEnter new value to update: ");
+        let updatedPerson: Person = new Person(person.firstName, person.lastName, person.address,
+            person.city, person.state, person.zip, person.phoneNo);
+        switch (Number(choice)) {
+            case 1:
+                regexStringPattern.test(data) ? updatedPerson.setAddress(data) : console.log("Invlid address format!!!");
+                break;
+            case 2:
+                regexStringPattern.test(data) ? updatedPerson.setCity(data) : console.log("Invlid city name format!!!");
+                break;
+            case 3:
+                regexStringPattern.test(data) ? updatedPerson.setState(data) : console.log("Invlid state name format!!!");
+                break;
+            case 4:
+                regexZipPattern.test(data) ? updatedPerson.setZip(Number(data)) : console.log("Invalid zip code format!!!");
+                break;
+            case 5:
+                regexPhoneNoPattern.test(data) ? updatedPerson.setNumber(Number(data)) : console.log("Invalid phone number format!!!");
+                break;
+            default:
+                console.log("Invalid choice!!!");
+        }
+        addressBookList[index - 1] = updatedPerson;
+        fileOperations.writeJsonFile(addressBookList);
+        console.log("Person details updated successfully!!!");
+    }
+
 }

@@ -25,5 +25,13 @@ class FileOperations {
             console.log(err);
         }
     }
+
+    displayRecords = (): void => {
+        console.log("\n*********All Contact************\n");
+        this.readJsonFile();
+        personDetails.map((i, index) => {
+            console.log((index + 1) + " " + JSON.stringify(i));
+        })
+    }
 }
 export let fileOperations = new FileOperations();

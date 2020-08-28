@@ -38,4 +38,8 @@ export class AddressBookService {
             throw new AddressBookException('User with same Mobile number already present');
         }
     }
+
+    displayContacts = (): void => {
+        fileOperations.displayRecords();
+    }
 }

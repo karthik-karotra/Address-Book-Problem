@@ -30,9 +30,32 @@
   </PropertyGroup>
   <ItemGroup>
     <None Include="AddressBookSimulator.ts" />
+    <Content Include="AddressBook.json">
+      <SubType>Code</SubType>
+    </Content>
     <Content Include="package.json" />
     <Content Include="README.md" />
     <Content Include="tsconfig.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Models\" />
+    <Folder Include="Exception\" />
+    <Folder Include="Utils\" />
+    <Folder Include="Service\" />
+  </ItemGroup>
+  <ItemGroup>
+    <TypeScriptCompile Include="Exception\AddressBookException.ts">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="Models\Person.ts">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="Service\AddressBookService.ts">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="Utils\FileOperations.ts">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
   </ItemGroup>
   <Import Project="$(VSToolsPath)\Node.js Tools\Microsoft.NodejsToolsV2.targets" />
   <ProjectExtensions>

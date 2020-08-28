@@ -1,0 +1,57 @@
+[
+  {
+    
+    "firstName": "Karthik",
+    "lastName": "Karotra",
+    "address": "Mumbai",
+    "city": "Sanpada",
+    "state": "Maharashtra",
+    "zip": "400703",
+    "phoneNo": "7845121010"
+  },
+  {
+    "firstName": "Vipul",
+    "lastName": "Patel",
+    "address": "Kharghar",
+    "city": "Mumbai",
+    "state": "Maharashtra",
+    "zip": "4012015",
+    "phoneNo": "9874564125"
+  },
+  {
+    "firstName": "Gajanan",
+    "lastName": "Desai",
+    "address": "Thane",
+    "city": "Mumbai",
+    "state": "Maharashtra",
+    "zip": "410520",
+    "phoneNo": "9878456523"
+  },
+  {
+    "firstName": "Palak",
+    "lastName": "Partani",
+    "address": "Sanpada",
+    "city": "Mumbai",
+    "state": "Maharashtra",
+    "zip": "4154624",
+    "phoneNo": "8745126585"
+  },
+  {
+    "firstName": "Sampada",
+    "lastName": "Prabhu",
+    "address": "Nerul",
+    "city": "Mahar",
+    "state": "Mahar",
+    "zip": "456123",
+    "phoneNo": "7452196548"
+  },
+  {
+    "firstName": "Vishal",
+    "lastName": "Patil",
+    "address": "Jalgoan",
+    "city": "Jalgoan",
+    "state": "Maharashtra",
+    "zip": "412549",
+    "phoneNo": "8541257964"
+  }
+]

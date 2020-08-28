@@ -1,0 +1,2 @@
+D:\C-Sharp\TypeScript\AddressBookProblem\AddressBookProblem\obj\Debug\AddressBookProblem.njsproj.CoreCompileInputs.cache
+D:\C-Sharp\TypeScript\AddressBookProblem\AddressBookProblem\bin\Microsoft.NodejsTools.WebRole.dll

@@ -12,7 +12,8 @@ let performCrudOperations = () => {
             console.log("2: Display Contacts");
             console.log("3: Update Contact");
             console.log("4: Delete Contact");
-            console.log("5: Exit");
+            console.log("5: Sort Contacts");
+            console.log("6: Exit");
             let choice: number = readlineSync.question("Enter your choice: ");
             switch (Number(choice)) {
                 case 1:
@@ -30,6 +31,9 @@ let performCrudOperations = () => {
                     new AddressBookService().deleteContact();
                     break;
                 case 5:
+                    new AddressBookService().sortContacts();
+                    break;
+                case 6:
                     exit();
                 default:
                     console.log("\n Invalid choice!!!!!!!!!\n");

@@ -89,4 +89,31 @@ export class AddressBookService {
         fileOperations.writeJsonFile(addressBookList);
         console.log("Person details deleted successfully!!!");
     }
+
+    sortContacts = (): void => {
+        console.log("\n***********Sorting Contacts**************\n");
+        console.log("1: Sort data by name");
+        console.log("2: Sort data by city");
+        console.log("3: Sort data by state");
+        console.log("4: Sort data by zip");
+        let choice: string = readlineSync.question("\nEnter your choice: ");
+        addressBookList = fileOperations.readJsonFile();
+        switch (Number(choice)) {
+            case 1:
+                addressBookList.sort((a, b) => a.firstName.localeCompare(b.firstName) || a.lastName.localeCompare(b.lastName));
+                break;
+            case 2:
+                addressBookList.sort((a, b) => a.city.localeCompare(b.city));
+                break;
+            case 3:
+                addressBookList.sort((a, b) => a.state.localeCompare(b.state));
+                break;
+            case 4:
+                addressBookList.sort((a, b) => String(a.zip).localeCompare(String(b.zip)));
+                break;
+            default:
+                console.log("Invalid choice!!!");
+        }
+        fileOperations.writeJsonFile(addressBookList);
+    }
 }

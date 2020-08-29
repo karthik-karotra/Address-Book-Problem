@@ -81,4 +81,12 @@ export class AddressBookService {
         console.log("Person details updated successfully!!!");
     }
 
+    deleteContact = (): void => {
+        console.log("\n*********Delete Contact************\n");
+        let index: number = readlineSync.question("\nEnter column record number to delete record: ");
+        addressBookList = fileOperations.readJsonFile();
+        addressBookList.splice(index - 1, 1);
+        fileOperations.writeJsonFile(addressBookList);
+        console.log("Person details deleted successfully!!!");
+    }
 }
